@@ -1,0 +1,21 @@
+name: Go
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - name: Verify example checker contract
+        run: go test ./examples/simple_http_checker -run TestExampleCheckerContract -count=1 -v
+      - run: go test ./...
+      - run: go test -race ./...
+      - run: go vet ./...
+      - run: go build ./examples/...
