@@ -1,5 +1,7 @@
 # junge-checkers
 
+[![junge-checkers](https://github.com/skipper-ad/junge-checkers/actions/workflows/go.yml/badge.svg)](https://github.com/skipper-ad/junge-checkers/actions/workflows/go.yml)
+
 Go-библиотека для написания checker-ов под Skipper AD и Forcad.  
 Вдохновлена [go-checklib](https://github.com/pomo-mondreganto/go-checklib)
 
